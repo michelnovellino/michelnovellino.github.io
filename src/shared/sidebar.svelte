@@ -55,6 +55,13 @@
         github
         <i class="material-icons">send</i>
       </a>
+            <a
+        class="collection-item white-text"
+        target="_blank"
+        href="https://gitlab.com/michelnovellino">
+        gitlab
+        <i class="material-icons">send</i>
+      </a>
       <a
         class="collection-item white-text"
         target="_blank"

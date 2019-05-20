@@ -18,7 +18,7 @@
     {
       img: "public/images/angular-logo.svg",
       type: "Angular",
-      title: "IutebGate",
+      title: "GASE",
       description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
       y control de actividades escolares, es un proyecto de tesis, aunque la del repositorio se haya tenido que resubir`,
       link: "https://github.com/LDTorres/Administrador-de-asistencias"
