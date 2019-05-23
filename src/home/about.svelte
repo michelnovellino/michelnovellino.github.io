@@ -5,6 +5,8 @@
   }
   .align-titles{
     display: flex !important;
+  }.align-titles img{
+    margin-right:10px;
   }
 </style>
 
