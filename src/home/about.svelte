@@ -3,15 +3,15 @@
   .row h4 {
     padding-left: 2% !important;
   }
-
-  
-  
+  .align-titles{
+    display: flex !important;
+  }
 </style>
 
 <div class="row">
   <div class="col s12 m12">
     <div class="row">
-      <h4 class="flow-text darken-4-text bolder">Sobre Mí</h4>
+      <h4 class="flow-text darken-4-text bolder align-titles"><img src="public/images/person.png">Sobre Mí</h4>
 
       <p class="darken-4-text">
         Soy un joven desarrollador web apasionado por la programación y el
@@ -25,7 +25,7 @@
       <div class="divider" />
     </div>
     <div class="row">
-      <h4 class="flow-text bolder darken-4-text">EXPERIENCIA</h4>
+      <h4 class="flow-text bolder darken-4-text align-titles"><img src="public/images/gear.png">EXPERIENCIA</h4>
     </div>
 
     <div class="row">
@@ -72,7 +72,7 @@
       <div class="divider" />
     </div>
     <div class="row">
-         <h4 class="flow-text bolder darken-4-text">Educación</h4>
+         <h4 class="flow-text bolder darken-4-text align-titles"><img src="public/images/education.png">Educación</h4>
 
       <h4 class="flow-text darken-4-text">Técnico superior en informática.</h4>
       <p class="darken-4-text bolder"> 2014 - 2017</p>
