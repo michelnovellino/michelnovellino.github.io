@@ -8,10 +8,12 @@
 
   import Footer from "./shared/footer.svelte";
 
-  import sw_config from './enviroments/sw_config'
-
+  import sw_config from './enviroments/sw_config';
+  import is_prod from './enviroments/production';
   onMount(async () => {
    document.getElementById('loader-container').classList.add("hide-loader");
+       console.log(is_prod());
+
 /*     register_service_worker();
     install_service_worker(); */
   })
