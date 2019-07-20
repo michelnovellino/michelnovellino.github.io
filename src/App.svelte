@@ -12,7 +12,7 @@
   import is_prod from './enviroments/production';
   onMount(async () => {
    document.getElementById('loader-container').classList.add("hide-loader");
-       console.log(is_prod());
+       console.log(is_prod(                                                         ));
 
 /*     register_service_worker();
     install_service_worker(); */
