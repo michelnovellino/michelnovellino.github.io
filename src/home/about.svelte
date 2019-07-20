@@ -1,19 +1,64 @@
+<script>
+  import is_prod from '../enviroments/production';
+
+
+  let work_experience = [
+    {
+      title: "Colaborador Freelance en Corporativos Web c.a.",
+      description: "pequeños cambios en sitios realizados en wordpress y php.",
+      duration: "2015 - 2016"
+    },
+    {
+      title: "Desarrollador web en liderlogo",
+      description: `esta empresa además de estar
+        conformadapor un equipo de expertos en diferentes áreas me permitió
+        crecer como profesional al incursionar en tecnologías como nodejs, a
+        parte de brindarme conocimientos por los cuales estoy agradecido.`,
+      duration: "2016 - 2017"
+    },
+    {
+      title: "FREELANCER",
+      description:
+        "Elaboracion de proyectos personales y clientes particulares",
+      duration: "2017 - actualidad"
+    },
+
+    {
+      title: "Desarrollador Angular en trazo",
+      description: `Trazo tiene la particularidad de que trabaja con Productos Minimos
+        viables o Mvp's por sus siglas en ingles, lo que signigica que se
+        encargan de tomar una idea y convertirla en un producto lo
+        suficientemente robusto para generar ganancias o para que sea realmente
+        util, hasta los momentos entre los conocimientos que he obtenido con
+        ellos destacan: Uso de scrum en entornos de trabajo en equipo,
+        angularjs, angular en sus versiones 5 y 7, ionic en sus versiones 3 y 4.`,
+      duration: "diciembre 2018 - hasta la fecha"
+    }
+  ];
+
+
+</script>
+
 <style>
   .row p,
   .row h4 {
     padding-left: 2% !important;
   }
-  .align-titles{
+  .align-titles {
     display: flex !important;
-  }.align-titles img{
-    margin-right:10px;
+  }
+  .align-titles img {
+    margin-right: 10px;
   }
 </style>
 
 <div class="row">
   <div class="col s12 m12">
     <div class="row">
-      <h4 class="flow-text darken-4-text bolder align-titles"><img src="public/images/person.png">Sobre Mí</h4>
+      <h4 class="flow-text darken-4-text bolder align-titles">
+        <img src="{is_prod()}images/person.png" />
+        Sobre Mí
+      </h4>
 
       <p class="darken-4-text">
         Soy un joven desarrollador web apasionado por la programación y el
@@ -27,57 +72,29 @@
       <div class="divider" />
     </div>
     <div class="row">
-      <h4 class="flow-text bolder darken-4-text align-titles"><img src="public/images/gear.png">EXPERIENCIA</h4>
-    </div>
-
-    <div class="row">
-      <h4 class="flow-text darken-4-text">
-        Colaborador Freelance en Corporativos Web c.a.
+      <h4 class="flow-text bolder darken-4-text align-titles">
+        <img src="{is_prod()}images/gear.png"  alt="person-icon"/>
+        EXPERIENCIA
       </h4>
-      <p class=" darken-4-text bolder">2015 - 2016</p>
-      <p class="darken-4-text ">
-        pequeños cambios en sitios realizados en wordpress y php.
-      </p>
-
     </div>
-    <div class="row">
-      <h4 class="flow-text darken-4-text">Desarrollador web en liderlogo</h4>
-      <p class="darken-4-text bolder">2016 - 2017</p>
-      <p class="darken-4-text">
-        DESARROLLADOR WEB liderlogo | 2016 - 2017 esta empresa de estar
-        conformado por un equipo de expertos en diferentes áreas me permitió
-        crecer como profesional al incursionar en tecnologías como nodejs, a
-        parte de brindarme conocimientos por los cuales estoy agradecido.
-      </p>
-    </div>
-
-    <div class="row">
-      <h4 class="flow-text darken-4-text ">FREELANCER</h4>
-      <p class="darken-4-text bolder">2017 - hasta la fecha</p>
-    </div>
-
-    <div class="row">
-      <h4 class="flow-text darken-4-text">Desarrollador Angular en trazo</h4>
-      <p class="darken-4-text bolder">diciembre 2018 - hasta la fecha</p>
-      <p class="darken-4-text">
-        Trazo tiene la particularidad de que trabaja con Productos Minimos
-        viables o Mvp's por sus siglas en ingles, lo que signigica que se
-        encargan de tomar una idea y convertirla en un producto lo
-        suficientemente robusto para generar ganancias o para que sea realmente
-        util, hasta los momentos entre los conocimientos que he obtenido con
-        ellos destacan: Uso de scrum en entornos de trabajo en equipo,
-        angularjs, angular en sus versiones 5 y 7, ionic en sus versiones 3 y 4.
-      </p>
-    </div>
-
+    {#each work_experience as experience}
+      <div class="row">
+        <h4 class="flow-text darken-4-text">{experience.title}</h4>
+        <p class="darken-4-text bolder">{experience.duration}</p>
+        <p class="darken-4-text"> {experience.description} </p>
+      </div>
+    {/each}
     <div class="row">
       <div class="divider" />
     </div>
     <div class="row">
-         <h4 class="flow-text bolder darken-4-text align-titles"><img src="public/images/education.png">Educación</h4>
+      <h4 class="flow-text bolder darken-4-text align-titles">
+        <img src="{is_prod()}images/education.png" />
+        Educación
+      </h4>
 
       <h4 class="flow-text darken-4-text">Técnico superior en informática.</h4>
-      <p class="darken-4-text bolder"> 2014 - 2017</p>
+      <p class="darken-4-text bolder">2014 - 2017</p>
       <p class="darken-4-text">
         Instituto Universitario Del Estado Bolivar | 2014- 2017
       </p>

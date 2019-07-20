@@ -1,4 +1,12 @@
+<style>
 
+.iti-flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.1.0/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti-flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.1.0/img/flags@2x.png");}
+}
+
+</style>
 <script>
 
   var items =  [

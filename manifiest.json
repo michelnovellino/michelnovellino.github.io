@@ -1,0 +1,10 @@
+{
+    "name": "Michel Novellino CV",
+    "short_name": "CV",
+    "theme_color": "#ffd961",
+    "background_color": "#ffd961",
+    "display": "browser",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }

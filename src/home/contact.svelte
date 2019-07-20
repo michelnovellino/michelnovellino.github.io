@@ -4,6 +4,8 @@
     padding:4%;
   }
 </style>
+<script>
+</script>
 
 <div class="row">
   <div class="divider " />

@@ -1,14 +1,16 @@
 <script>
+  import is_prod from '../enviroments/production';
+
   let habilities = [
     {
-      img: "public/images/vue-logo.svg",
+      img: is_prod()+"images/vue-logo.svg",
       type: "Vuejs",
       title: "B1B",
       description: "Sistema de gestion bursátil de inversiones y referidos.",
       link: "https://github.com/danieljtorres/b1b"
     },
     {
-      img: "public/images/nodejs-logo.svg",
+      img: is_prod()+"images/nodejs-logo.svg",
       type: "Nodejs",
       title: "Diseñador de logos.",
       description:
@@ -16,7 +18,7 @@
       link: "https://github.com/BazamIdeas/disenador"
     },
     {
-      img: "public/images/angular-logo.svg",
+      img: is_prod()+"images/angular-logo.svg",
       type: "Angular",
       title: "GASE",
       description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
@@ -24,7 +26,7 @@
       link: "https://github.com/LDTorres/Administrador-de-asistencias"
     },
     {
-      img: "public/images/ionic-logo.svg",
+      img:  is_prod()+"images/ionic-logo.svg",
       type: "Ionic",
       title: "Chat con firebase",
       description:

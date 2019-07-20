@@ -4,18 +4,35 @@
 	<meta charset='utf8'>
 	<meta name='viewport' content='width=device-width'>
 
-	<title>Svelte app</title>
+	<title>Michel Novellino</title>
 
 	<link rel='icon' type="image/x-icon" href='./favicon.ico'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel='stylesheet' href='./global.css'>
 	<link rel='stylesheet' href='./bundle.css'>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.1.0/css/intlTelInput.css"
+    />
 </head>
-
+<div id="loader-container" class="loader-container">
+    <svg width="200" height="200" viewBox="0 0 100 100">
+     <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+     <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+     <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+     <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+   </svg>
+   </div>
 <body>
 	<script src='./bundle.js'></script>
-
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"
+	></script>
+	<script src="custom-scripts/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.1.0/js/intlTelInput.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.1.0/js/utils.js"></script>
 </body>
 </html>
