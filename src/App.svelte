@@ -10,7 +10,6 @@
 
   import sw_config from './enviroments/sw_config'; */
   onMount(async () => {
-   document.getElementById('loader-container').classList.add("hide-loader");
 
 /*     register_service_worker();
     install_service_worker(); */
