@@ -5,7 +5,7 @@
   import Sidebar from "./shared/sidebar.svelte";
   import About from "./home/about.svelte";
   import Contact from "./home/contact.svelte";
-
+ import Footer from "./shared/footer.svelte";
 /*  import Footer from "./shared/footer.svelte";
 
   import sw_config from './enviroments/sw_config'; */
