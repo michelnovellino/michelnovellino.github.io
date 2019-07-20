@@ -6,13 +6,11 @@
   import About from "./home/about.svelte";
   import Contact from "./home/contact.svelte";
 
-  import Footer from "./shared/footer.svelte";
+/*  import Footer from "./shared/footer.svelte";
 
-  import sw_config from './enviroments/sw_config';
-  import is_prod from './enviroments/production';
+  import sw_config from './enviroments/sw_config'; */
   onMount(async () => {
    document.getElementById('loader-container').classList.add("hide-loader");
-       console.log(is_prod(                                                         ));
 
 /*     register_service_worker();
     install_service_worker(); */
