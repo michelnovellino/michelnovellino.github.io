@@ -56,7 +56,7 @@
   <div class="col s12 m12">
     <div class="row">
       <h4 class="flow-text darken-4-text bolder align-titles">
-        <img src="{is_prod()}images/person.png" />
+        <img alt="person" src="{is_prod()}images/person.png" />
         Sobre Mí
       </h4>
 
@@ -89,7 +89,7 @@
     </div>
     <div class="row">
       <h4 class="flow-text bolder darken-4-text align-titles">
-        <img src="{is_prod()}images/education.png" />
+        <img alt="education" src="{is_prod()}images/education.png" />
         Educación
       </h4>
 
