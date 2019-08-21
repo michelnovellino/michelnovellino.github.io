@@ -16,7 +16,6 @@
   
 </script>
 <svelte:head>
-<title>Título de página. Máximo de 60-70 caracteres</title>
 <meta name="description" content="Se que normalmente aqui debo colocar una descripción, pero prefiero que entres a ver lo que prepare." />
 
 
