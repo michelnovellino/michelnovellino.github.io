@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+
   import is_prod from '../enviroments/production';
 
   let habilities = [
@@ -34,6 +36,10 @@
       link: "https://github.com/michelnovellino/ionic-firebase-chat"
     }
   ];
+
+    onMount(async () => {
+      
+      })
 </script>
 
 <style>

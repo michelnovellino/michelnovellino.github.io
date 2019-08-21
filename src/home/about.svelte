@@ -1,6 +1,6 @@
 <script>
   import is_prod from '../enviroments/production';
-
+z
 
   let work_experience = [
     {
