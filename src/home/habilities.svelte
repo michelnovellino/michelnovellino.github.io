@@ -45,6 +45,7 @@
   loader = document.getElementById("loader-container");
   loader_status = getComputedStyle(loader);
   console.log(loader_status.display);
+
 </script>
 
 <style>
@@ -60,12 +61,17 @@
     padding: 5%;
     object-fit: contain;
   }
-  .collection-item {
+/*   .collection-item {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: flex-end;
+  } */
+  .carousel-cell{
+    width:30%;
+    padding:2rem;
   }
+
 </style>
 
 <div class="row">
@@ -75,10 +81,10 @@
   <h4 class="flow-text bolder darken-4-text center-align">
     Proyectos Destacados
   </h4>
+    <div class="main-carousel">
 
   {#each examples as example}
-    {#if visible}
-      <div class="col s12 m6 l3" transition:fade>
+  <div class="carousel-cell">
         <div class="card z-depth-3">
           <div class="card-image waves-effect waves-block waves-light">
             <img
@@ -110,8 +116,8 @@
               <i class="material-icons">link</i>
             </a>
           </div>
-        </div>
       </div>
-    {/if}
+  </div>
   {/each}
+  </div>
 </div>

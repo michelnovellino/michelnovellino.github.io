@@ -111,7 +111,9 @@ nav {
 .card-image {
     background: white;
 }
-
+.darkness-general{
+	background: #2c2319 !important;
+}
 .yellow-general{
 	background: #ffd961 !important;
 }
@@ -235,3 +237,6 @@ nav {
  .show-loader{
 	 display:block !important;
  }
+ .flickity-button{
+    display:none !important;
+  }

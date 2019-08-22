@@ -96,8 +96,9 @@ var app = (function () {
 		return text(' ');
 	}
 
-	function empty() {
-		return text('');
+	function listen(node, event, handler, options) {
+		node.addEventListener(event, handler, options);
+		return () => node.removeEventListener(event, handler, options);
 	}
 
 	function attr(node, attribute, value) {
@@ -574,19 +575,6 @@ var app = (function () {
 		return f * f * f + 1.0;
 	}
 
-	function fade(node, {
-		delay = 0,
-		duration = 400
-	}) {
-		const o = +getComputedStyle(node).opacity;
-
-		return {
-			delay,
-			duration,
-			css: t => `opacity: ${t * o}`
-		};
-	}
-
 	function fly(node, {
 		delay = 0,
 		duration = 400,
@@ -631,9 +619,9 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (80:4) {#if visible}
-	function create_if_block(ctx) {
-		var div4, div3, div0, img, img_src_value, img_alt_value, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11, div4_transition, current;
+	// (86:2) {#each examples as example}
+	function create_each_block(ctx) {
+		var div4, div3, div0, img, img_src_value, img_alt_value, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11;
 
 		return {
 			c: function create() {
@@ -662,35 +650,35 @@ var app = (function () {
 				i2 = element("i");
 				i2.textContent = "link";
 				t11 = space();
-				img.className = "activator svelte-vf1uwd";
+				img.className = "activator svelte-nmlkgf";
 				img.src = img_src_value = "\n              " + ctx.example.img + "\n              ";
 				img.alt = img_alt_value = "\n              " + ctx.example.type;
-				add_location(img, file, 83, 12, 2458);
-				div0.className = "card-image waves-effect waves-block waves-light svelte-vf1uwd";
-				add_location(div0, file, 82, 10, 2384);
+				add_location(img, file, 89, 12, 2515);
+				div0.className = "card-image waves-effect waves-block waves-light svelte-nmlkgf";
+				add_location(div0, file, 88, 10, 2441);
 				i0.className = "material-icons right";
-				add_location(i0, file, 94, 14, 2772);
-				span0.className = "card-title activator darken-4-text svelte-vf1uwd";
-				add_location(span0, file, 92, 12, 2678);
-				div1.className = "card-content svelte-vf1uwd";
-				add_location(div1, file, 91, 10, 2639);
+				add_location(i0, file, 100, 14, 2829);
+				span0.className = "card-title activator darken-4-text svelte-nmlkgf";
+				add_location(span0, file, 98, 12, 2735);
+				div1.className = "card-content svelte-nmlkgf";
+				add_location(div1, file, 97, 10, 2696);
 				i1.className = "material-icons right";
-				add_location(i1, file, 101, 14, 2974);
-				span1.className = "card-title grey-text text-darken-4 svelte-vf1uwd";
-				add_location(span1, file, 99, 12, 2909);
-				add_location(p, file, 103, 12, 3048);
+				add_location(i1, file, 107, 14, 3031);
+				span1.className = "card-title grey-text text-darken-4 svelte-nmlkgf";
+				add_location(span1, file, 105, 12, 2966);
+				add_location(p, file, 109, 12, 3105);
 				i2.className = "material-icons";
-				add_location(i2, file, 109, 14, 3254);
-				a.className = "collection-item right-align brown-text svelte-vf1uwd";
+				add_location(i2, file, 115, 14, 3311);
+				a.className = "collection-item right-align brown-text";
 				a.target = "_blank";
 				a.href = a_href_value = ctx.example.link;
-				add_location(a, file, 104, 12, 3089);
-				div2.className = "card-reveal svelte-vf1uwd";
-				add_location(div2, file, 98, 10, 2871);
-				div3.className = "card z-depth-3 svelte-vf1uwd";
-				add_location(div3, file, 81, 8, 2345);
-				div4.className = "col s12 m6 l3";
-				add_location(div4, file, 80, 6, 2293);
+				add_location(a, file, 110, 12, 3146);
+				div2.className = "card-reveal svelte-nmlkgf";
+				add_location(div2, file, 104, 10, 2928);
+				div3.className = "card z-depth-3 svelte-nmlkgf";
+				add_location(div3, file, 87, 8, 2402);
+				div4.className = "carousel-cell svelte-nmlkgf";
+				add_location(div4, file, 86, 2, 2366);
 			},
 
 			m: function mount(target, anchor) {
@@ -716,101 +704,20 @@ var app = (function () {
 				append(a, t9);
 				append(a, i2);
 				append(div4, t11);
-				current = true;
 			},
 
 			p: noop,
 
-			i: function intro(local) {
-				if (current) return;
-				add_render_callback(() => {
-					if (!div4_transition) div4_transition = create_bidirectional_transition(div4, fade, {}, true);
-					div4_transition.run(1);
-				});
-
-				current = true;
-			},
-
-			o: function outro(local) {
-				if (!div4_transition) div4_transition = create_bidirectional_transition(div4, fade, {}, false);
-				div4_transition.run(0);
-
-				current = false;
-			},
-
 			d: function destroy(detaching) {
 				if (detaching) {
 					detach(div4);
-					if (div4_transition) div4_transition.end();
-				}
-			}
-		};
-	}
-
-	// (79:2) {#each examples as example}
-	function create_each_block(ctx) {
-		var if_block_anchor, current;
-
-		var if_block = (ctx.visible) && create_if_block(ctx);
-
-		return {
-			c: function create() {
-				if (if_block) if_block.c();
-				if_block_anchor = empty();
-			},
-
-			m: function mount(target, anchor) {
-				if (if_block) if_block.m(target, anchor);
-				insert(target, if_block_anchor, anchor);
-				current = true;
-			},
-
-			p: function update(changed, ctx) {
-				if (ctx.visible) {
-					if (if_block) {
-						if_block.p(changed, ctx);
-						if_block.i(1);
-					} else {
-						if_block = create_if_block(ctx);
-						if_block.c();
-						if_block.i(1);
-						if_block.m(if_block_anchor.parentNode, if_block_anchor);
-					}
-				} else if (if_block) {
-					group_outros();
-					on_outro(() => {
-						if_block.d(1);
-						if_block = null;
-					});
-
-					if_block.o(1);
-					check_outros();
-				}
-			},
-
-			i: function intro(local) {
-				if (current) return;
-				if (if_block) if_block.i();
-				current = true;
-			},
-
-			o: function outro(local) {
-				if (if_block) if_block.o();
-				current = false;
-			},
-
-			d: function destroy(detaching) {
-				if (if_block) if_block.d(detaching);
-
-				if (detaching) {
-					detach(if_block_anchor);
 				}
 			}
 		};
 	}
 
 	function create_fragment(ctx) {
-		var div1, div0, t0, div2, h4, t2, current;
+		var div1, div0, t0, div3, h4, t2, div2;
 
 		var each_value = ctx.examples;
 
@@ -820,40 +727,30 @@ var app = (function () {
 			each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
 		}
 
-		function outro_block(i, detaching, local) {
-			if (each_blocks[i]) {
-				if (detaching) {
-					on_outro(() => {
-						each_blocks[i].d(detaching);
-						each_blocks[i] = null;
-					});
-				}
-
-				each_blocks[i].o(local);
-			}
-		}
-
 		return {
 			c: function create() {
 				div1 = element("div");
 				div0 = element("div");
 				t0 = space();
-				div2 = element("div");
+				div3 = element("div");
 				h4 = element("h4");
 				h4.textContent = "Proyectos Destacados";
 				t2 = space();
+				div2 = element("div");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 				div0.className = "divider";
-				add_location(div0, file, 71, 2, 2086);
+				add_location(div0, file, 77, 2, 2149);
 				div1.className = "row";
-				add_location(div1, file, 70, 0, 2066);
+				add_location(div1, file, 76, 0, 2129);
 				h4.className = "flow-text bolder darken-4-text center-align";
-				add_location(h4, file, 74, 2, 2148);
-				div2.className = "row habilities svelte-vf1uwd";
-				add_location(div2, file, 73, 0, 2117);
+				add_location(h4, file, 80, 2, 2211);
+				div2.className = "main-carousel";
+				add_location(div2, file, 83, 4, 2305);
+				div3.className = "row habilities svelte-nmlkgf";
+				add_location(div3, file, 79, 0, 2180);
 			},
 
 			l: function claim(nodes) {
@@ -864,19 +761,18 @@ var app = (function () {
 				insert(target, div1, anchor);
 				append(div1, div0);
 				insert(target, t0, anchor);
-				insert(target, div2, anchor);
-				append(div2, h4);
-				append(div2, t2);
+				insert(target, div3, anchor);
+				append(div3, h4);
+				append(div3, t2);
+				append(div3, div2);
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].m(div2, null);
 				}
-
-				current = true;
 			},
 
 			p: function update(changed, ctx) {
-				if (changed.visible || changed.examples) {
+				if (changed.examples) {
 					each_value = ctx.examples;
 
 					for (var i = 0; i < each_value.length; i += 1) {
@@ -884,40 +780,28 @@ var app = (function () {
 
 						if (each_blocks[i]) {
 							each_blocks[i].p(changed, child_ctx);
-							each_blocks[i].i(1);
 						} else {
 							each_blocks[i] = create_each_block(child_ctx);
 							each_blocks[i].c();
-							each_blocks[i].i(1);
 							each_blocks[i].m(div2, null);
 						}
 					}
 
-					group_outros();
-					for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
-					check_outros();
+					for (; i < each_blocks.length; i += 1) {
+						each_blocks[i].d(1);
+					}
+					each_blocks.length = each_value.length;
 				}
 			},
 
-			i: function intro(local) {
-				if (current) return;
-				for (var i = 0; i < each_value.length; i += 1) each_blocks[i].i();
-
-				current = true;
-			},
-
-			o: function outro(local) {
-				each_blocks = each_blocks.filter(Boolean);
-				for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0);
-
-				current = false;
-			},
+			i: noop,
+			o: noop,
 
 			d: function destroy(detaching) {
 				if (detaching) {
 					detach(div1);
 					detach(t0);
-					detach(div2);
+					detach(div3);
 				}
 
 				destroy_each(each_blocks, detaching);
@@ -970,7 +854,7 @@ var app = (function () {
 	  $$invalidate('loader_status', loader_status = getComputedStyle(loader));
 	  console.log(loader_status.display);
 
-		return { visible, examples };
+		return { examples };
 	}
 
 	class Habilities extends SvelteComponentDev {
@@ -1777,7 +1661,7 @@ var app = (function () {
 	const file$4 = "src/App.svelte";
 
 	function create_fragment$5(ctx) {
-		var meta0, meta1, meta2, meta3, meta4, meta5, meta6, t0, div2, div0, t1, div1, t2, div3, div3_transition, t3, div4, t4, current;
+		var meta0, meta1, meta2, meta3, meta4, meta5, meta6, t0, div0, button0, i0, t2, ul, li, button1, i1, t4, div3, div1, t5, div2, t6, div4, t7, div5, t8, current, dispose;
 
 		var sidebar = new Sidebar({ $$inline: true });
 
@@ -1799,51 +1683,76 @@ var app = (function () {
 				meta5 = element("meta");
 				meta6 = element("meta");
 				t0 = space();
-				div2 = element("div");
 				div0 = element("div");
-				sidebar.$$.fragment.c();
-				t1 = space();
-				div1 = element("div");
-				about.$$.fragment.c();
+				button0 = element("button");
+				i0 = element("i");
+				i0.textContent = "build";
 				t2 = space();
-				div3 = element("div");
-				habilities.$$.fragment.c();
-				t3 = space();
-				div4 = element("div");
-				contact.$$.fragment.c();
+				ul = element("ul");
+				li = element("li");
+				button1 = element("button");
+				i1 = element("i");
+				i1.textContent = "file_download";
 				t4 = space();
+				div3 = element("div");
+				div1 = element("div");
+				sidebar.$$.fragment.c();
+				t5 = space();
+				div2 = element("div");
+				about.$$.fragment.c();
+				t6 = space();
+				div4 = element("div");
+				habilities.$$.fragment.c();
+				t7 = space();
+				div5 = element("div");
+				contact.$$.fragment.c();
+				t8 = space();
 				footer.$$.fragment.c();
 				meta0.name = "description";
-				meta0.content = "Se que normalmente aqui debo colocar una descripción, pero prefiero que entres a ver lo que prepare.";
-				add_location(meta0, file$4, 21, 0, 535);
+				meta0.content = "Se que normalmente aqui debo colocar una descripción, pero prefiero\n    que entres a ver lo que prepare.";
+				add_location(meta0, file$4, 38, 2, 921);
 				meta1.name = "twitter:card";
 				attr(meta1, "value", "summary");
-				add_location(meta1, file$4, 24, 0, 676);
+				add_location(meta1, file$4, 43, 2, 1075);
 				attr(meta2, "property", "og:title");
 				meta2.content = "Michel Novellino Dev";
-				add_location(meta2, file$4, 27, 0, 721);
+				add_location(meta2, file$4, 45, 2, 1123);
 				attr(meta3, "property", "og:type");
 				meta3.content = "article";
-				add_location(meta3, file$4, 28, 0, 781);
+				add_location(meta3, file$4, 46, 2, 1185);
 				attr(meta4, "property", "og:url");
 				meta4.content = "http://www.michelnovelino.com";
-				add_location(meta4, file$4, 29, 0, 827);
+				add_location(meta4, file$4, 47, 2, 1233);
 				attr(meta5, "property", "og:image");
 				meta5.content = "http://www.michelnovelino.com/public/images/logo.jpeg";
-				add_location(meta5, file$4, 30, 0, 894);
+				add_location(meta5, file$4, 48, 2, 1302);
 				attr(meta6, "property", "og:description");
 				meta6.content = "Desarrollo movil - WebApps y más";
-				add_location(meta6, file$4, 31, 0, 987);
-				div0.className = "col s12 m4 l3 sidebar-container svelte-1eiazml";
-				add_location(div0, file$4, 47, 2, 1223);
-				div1.className = "col 12 m8 l9";
-				add_location(div1, file$4, 51, 2, 1297);
-				div2.className = "row";
-				add_location(div2, file$4, 46, 0, 1203);
+				add_location(meta6, file$4, 51, 2, 1405);
+				i0.className = "large material-icons";
+				add_location(i0, file$4, 56, 4, 1602);
+				attr(button0, "href", "#");
+				button0.className = "btn-floating btn-large darkness-general";
+				add_location(button0, file$4, 55, 2, 1532);
+				i1.className = "material-icons";
+				add_location(i1, file$4, 61, 8, 1755);
+				button1.className = "btn-floating darkness-general";
+				add_location(button1, file$4, 60, 6, 1680);
+				add_location(li, file$4, 59, 4, 1669);
+				add_location(ul, file$4, 58, 2, 1660);
+				div0.className = "fixed-action-btn";
+				add_location(div0, file$4, 54, 0, 1499);
+				div1.className = "col s12 m4 l3 sidebar-container svelte-108qmvx";
+				add_location(div1, file$4, 68, 2, 1861);
+				div2.className = "col 12 m8 l9";
+				add_location(div2, file$4, 72, 2, 1935);
 				div3.className = "row";
-				add_location(div3, file$4, 56, 0, 1355);
+				add_location(div3, file$4, 67, 0, 1841);
 				div4.className = "row";
-				add_location(div4, file$4, 59, 0, 1413);
+				add_location(div4, file$4, 77, 0, 1993);
+				div5.className = "row";
+				add_location(div5, file$4, 80, 0, 2035);
+				dispose = listen(button1, "click", download);
 			},
 
 			l: function claim(nodes) {
@@ -1859,19 +1768,28 @@ var app = (function () {
 				append(document.head, meta5);
 				append(document.head, meta6);
 				insert(target, t0, anchor);
-				insert(target, div2, anchor);
-				append(div2, div0);
-				mount_component(sidebar, div0, null);
-				append(div2, t1);
-				append(div2, div1);
-				mount_component(about, div1, null);
-				insert(target, t2, anchor);
-				insert(target, div3, anchor);
-				mount_component(habilities, div3, null);
-				insert(target, t3, anchor);
-				insert(target, div4, anchor);
-				mount_component(contact, div4, null);
+				insert(target, div0, anchor);
+				append(div0, button0);
+				append(button0, i0);
+				append(div0, t2);
+				append(div0, ul);
+				append(ul, li);
+				append(li, button1);
+				append(button1, i1);
 				insert(target, t4, anchor);
+				insert(target, div3, anchor);
+				append(div3, div1);
+				mount_component(sidebar, div1, null);
+				append(div3, t5);
+				append(div3, div2);
+				mount_component(about, div2, null);
+				insert(target, t6, anchor);
+				insert(target, div4, anchor);
+				mount_component(habilities, div4, null);
+				insert(target, t7, anchor);
+				insert(target, div5, anchor);
+				mount_component(contact, div5, null);
+				insert(target, t8, anchor);
 				mount_component(footer, target, anchor);
 				current = true;
 			},
@@ -1886,11 +1804,6 @@ var app = (function () {
 
 				habilities.$$.fragment.i(local);
 
-				add_render_callback(() => {
-					if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fade, {}, true);
-					div3_transition.run(1);
-				});
-
 				contact.$$.fragment.i(local);
 
 				footer.$$.fragment.i(local);
@@ -1902,10 +1815,6 @@ var app = (function () {
 				sidebar.$$.fragment.o(local);
 				about.$$.fragment.o(local);
 				habilities.$$.fragment.o(local);
-
-				if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fade, {}, false);
-				div3_transition.run(0);
-
 				contact.$$.fragment.o(local);
 				footer.$$.fragment.o(local);
 				current = false;
@@ -1922,7 +1831,9 @@ var app = (function () {
 
 				if (detaching) {
 					detach(t0);
-					detach(div2);
+					detach(div0);
+					detach(t4);
+					detach(div3);
 				}
 
 				sidebar.$destroy();
@@ -1930,36 +1841,47 @@ var app = (function () {
 				about.$destroy();
 
 				if (detaching) {
-					detach(t2);
-					detach(div3);
+					detach(t6);
+					detach(div4);
 				}
 
 				habilities.$destroy();
 
 				if (detaching) {
-					if (div3_transition) div3_transition.end();
-					detach(t3);
-					detach(div4);
+					detach(t7);
+					detach(div5);
 				}
 
 				contact.$destroy();
 
 				if (detaching) {
-					detach(t4);
+					detach(t8);
 				}
 
 				footer.$destroy(detaching);
+
+				dispose();
 			}
 		};
 	}
 
+	function download(){
+	 fetch(`/downloads/michelnovellino-cv.pdf`)
+	.then(function(response) {
+	  return response.json();
+	})
+	.then(function(myJson) {
+	  console.log(myJson);
+	});
+	 }
+
 	function instance$3($$self) {
 		
-	/*  import Footer from "./shared/footer.svelte";
+	  /*  import Footer from "./shared/footer.svelte";
 
 	  import sw_config from './enviroments/sw_config'; */
 	  onMount(async () => {
-	    
+	    console.log(is_prod());
 	  });
 
 		return {};
