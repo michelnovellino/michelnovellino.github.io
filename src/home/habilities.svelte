@@ -1,18 +1,19 @@
 <script>
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
 
-  import is_prod from '../enviroments/production';
-
-  let habilities = [
+  import is_prod from "../enviroments/production";
+  var visible;
+  let examples = [
     {
-      img: is_prod()+"images/vue-logo.svg",
+      img: is_prod() + "images/vue-logo.svg",
       type: "Vuejs",
       title: "B1B",
       description: "Sistema de gestion bursátil de inversiones y referidos.",
       link: "https://github.com/danieljtorres/b1b"
     },
     {
-      img: is_prod()+"images/nodejs-logo.svg",
+      img: is_prod() + "images/nodejs-logo.svg",
       type: "Nodejs",
       title: "Diseñador de logos.",
       description:
@@ -20,7 +21,7 @@
       link: "https://github.com/BazamIdeas/disenador"
     },
     {
-      img: is_prod()+"images/angular-logo.svg",
+      img: is_prod() + "images/angular-logo.svg",
       type: "Angular",
       title: "GASE",
       description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
@@ -28,7 +29,7 @@
       link: "https://github.com/LDTorres/Administrador-de-asistencias"
     },
     {
-      img:  is_prod()+"images/ionic-logo.svg",
+      img: is_prod() + "images/ionic-logo.svg",
       type: "Ionic",
       title: "Chat con firebase",
       description:
@@ -36,10 +37,14 @@
       link: "https://github.com/michelnovellino/ionic-firebase-chat"
     }
   ];
-
-    onMount(async () => {
-      
-      })
+  var loader, loader_status;
+  setTimeout(function() {
+    visible = true;
+  }, 1200);
+  onMount(async () => {});
+  loader = document.getElementById("loader-container");
+  loader_status = getComputedStyle(loader);
+  console.log(loader_status.display);
 </script>
 
 <style>
@@ -71,40 +76,42 @@
     Proyectos Destacados
   </h4>
 
-  {#each habilities as hability}
-    <div class="col s12 m6 l3">
-      <div class="card z-depth-3">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img
-            class="activator"
-            src="
-            {hability.img}
-            "
-            alt="
-            {hability.type}" />
-        </div>
-        <div class="card-content">
-          <span class="card-title activator darken-4-text">
-             {hability.title}
-            <i class="material-icons right">remove_red_eye</i>
-          </span>
+  {#each examples as example}
+    {#if visible}
+      <div class="col s12 m6 l3" transition:fade>
+        <div class="card z-depth-3">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img
+              class="activator"
+              src="
+              {example.img}
+              "
+              alt="
+              {example.type}" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator darken-4-text">
+              {example.title}
+              <i class="material-icons right">remove_red_eye</i>
+            </span>
 
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
 
-            <i class="material-icons right">close</i>
-          </span>
-          <p> {hability.description} </p>
-          <a
-            class="collection-item right-align brown-text"
-            target="_blank"
-            href="{hability.link}">
-            ver más
-            <i class="material-icons">link</i>
-          </a>
+              <i class="material-icons right">close</i>
+            </span>
+            <p>{example.description}</p>
+            <a
+              class="collection-item right-align brown-text"
+              target="_blank"
+              href={example.link}>
+              ver más
+              <i class="material-icons">link</i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    {/if}
   {/each}
 </div>

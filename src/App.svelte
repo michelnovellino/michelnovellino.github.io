@@ -1,6 +1,10 @@
 <script>
   import { spring } from "svelte/motion";
   import { onMount } from "svelte";
+  import { fade } from 'svelte/transition';
+
+
+
   import Habilities from "./home/habilities.svelte";
   import Sidebar from "./shared/sidebar.svelte";
   import About from "./home/about.svelte";
@@ -10,10 +14,9 @@
 
   import sw_config from './enviroments/sw_config'; */
   onMount(async () => {
-
+    
   })
 
-  
 </script>
 <svelte:head>
 <meta name="description" content="Se que normalmente aqui debo colocar una descripción, pero prefiero que entres a ver lo que prepare." />
@@ -51,7 +54,7 @@
 
   </div>
 </div>
-<div class="row">
+<div class="row" transition:fade>
   <Habilities />
 </div>
 <div class="row">

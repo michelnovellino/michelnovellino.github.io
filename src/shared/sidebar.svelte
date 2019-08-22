@@ -1,3 +1,22 @@
+<script>
+	import { fly } from 'svelte/transition';
+
+  import is_prod from "../enviroments/production";
+  let habilities = [
+    { title: "HTML5" },
+    { title: "Javascript" },
+    { title: "CSS3" },
+    { title: "PHP" },
+    { title: "Nodejs" },
+    { title: "Vuejs" },
+    { title: "Angular" },
+    { title: "MaterializeCss" },
+    { title: "Wordpress" },
+    { title: "Mysql" },
+    { title: "MongoDb" }
+  ];
+</script>
+
 <style>
   .sidebar .card-content {
     background: #444;
@@ -19,9 +38,7 @@
     margin-left: 2%;
   }
 </style>
-<script>
-  import is_prod from '../enviroments/production';
-</script>
+
 <div class="card z-depth-3 s12 sidebar">
   <div class="card-image waves-effect waves-block waves-light">
     <img class="activator" src="{is_prod()}images/logo.jpeg " alt="profile" />
@@ -33,19 +50,9 @@
     </div>
     <span class="card-tittle yellow-general-text ">HABILIDADES</span>
     <ul class="collection">
-      <li class="collection-item white-text">HTML5</li>
-      <li class="collection-item white-text">CSS3</li>
-      <li class="collection-item white-text">Javascript</li>
-      <li class="collection-item white-text">PHP</li>
-      <li class="collection-item white-text">Nodejs</li>
-      <li class="collection-item white-text">Vuejs</li>
-      <li class="collection-item white-text">angular</li>
-      <li class="collection-item white-text">MaterializeCss</li>
-      <li class="collection-item white-text">Wordpress</li>
-      <li class="collection-item white-text">Mysql</li>
-      <li class="collection-item white-text">MongoDb</li>
-      <li class="collection-item white-text">SvelteJs</li>
-
+    {#each habilities as hability}
+      <li class="collection-item white-text" transition:fly="{{ y: 200, duration: 2000 }}">{hability.title}</li>
+    {/each }
     </ul>
 
     <span class="card-tittle yellow-general-text">Proyectos</span>
@@ -57,7 +64,7 @@
         github
         <i class="material-icons">send</i>
       </a>
-            <a
+      <a
         class="collection-item white-text"
         target="_blank"
         href="https://gitlab.com/michelnovellino">
