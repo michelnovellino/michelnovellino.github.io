@@ -13,7 +13,15 @@
       link: "https://github.com/danieljtorres/b1b"
     },
     {
-      img: is_prod() + "images/nodejs-logo.svg",
+      img: is_prod() + "images/ultimoo.jpeg",
+      type: "wordpress",
+      title: "Ultimoo",
+      description:
+        "Sitio web corporativo, ajustes en estructura, cambios visuales a sitio existente.",
+      link: "https://ultimoo.com/"
+    },
+    {
+      img: is_prod() + "images/logo-editor.jpeg",
       type: "Nodejs",
       title: "Diseñador de logos.",
       description:
@@ -21,7 +29,7 @@
       link: "https://github.com/BazamIdeas/disenador"
     },
     {
-      img: is_prod() + "images/angular-logo.svg",
+      img: is_prod() + "images/gase.png",
       type: "Angular",
       title: "GASE",
       description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
@@ -45,7 +53,6 @@
   loader = document.getElementById("loader-container");
   loader_status = getComputedStyle(loader);
   console.log(loader_status.display);
-
 </script>
 
 <style>
@@ -57,21 +64,19 @@
     background: #444 !important;
   }
   .habilities .card img.activator {
-    height: 200px;
-    padding: 5%;
-    object-fit: contain;
+    height: 18rem;
   }
-/*   .collection-item {
+  /*   .collection-item {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: flex-end;
   } */
-  .carousel-cell{
-    width:30%;
-    padding:2rem;
+  .carousel-cell {
+    width: 40%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-
 </style>
 
 <div class="row">
@@ -81,10 +86,10 @@
   <h4 class="flow-text bolder darken-4-text center-align">
     Proyectos Destacados
   </h4>
-    <div class="main-carousel">
+  <div class="main-carousel">
 
-  {#each examples as example}
-  <div class="carousel-cell">
+    {#each examples as example}
+      <div class="carousel-cell">
         <div class="card z-depth-3">
           <div class="card-image waves-effect waves-block waves-light">
             <img
@@ -116,8 +121,8 @@
               <i class="material-icons">link</i>
             </a>
           </div>
+        </div>
       </div>
-  </div>
-  {/each}
+    {/each}
   </div>
 </div>

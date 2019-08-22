@@ -2,7 +2,7 @@
   import { spring } from "svelte/motion";
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import is_prod from './enviroments/production';
+  import is_prod from "./enviroments/production";
 
   import Habilities from "./home/habilities.svelte";
   import Sidebar from "./shared/sidebar.svelte";
@@ -13,18 +13,23 @@
 
   import sw_config from './enviroments/sw_config'; */
   onMount(async () => {
-    console.log(is_prod())
+    console.log(is_prod());
   });
- function download(){
-   fetch(`/downloads/michelnovellino-cv.pdf`)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson);
-  });
- }
-
+  function download() {
+    fetch(`/downloads/michelnovellino-cv.pdf`)
+      .then(resp => resp.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = "michelnovellino-cv.pdf";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(() => alert("oh no!"));
+  }
 </script>
 
 <style>
@@ -54,8 +59,8 @@
 </svelte:head>
 <div class="fixed-action-btn">
   <button href="#" class="btn-floating btn-large darkness-general">
-    <i  class="large material-icons">build</i>
-  </button >
+    <i class="large material-icons">cloud_download</i>
+  </button>
   <ul>
     <li>
       <button on:click={download} class="btn-floating darkness-general">

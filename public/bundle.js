@@ -619,7 +619,7 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (86:2) {#each examples as example}
+	// (91:4) {#each examples as example}
 	function create_each_block(ctx) {
 		var div4, div3, div0, img, img_src_value, img_alt_value, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11;
 
@@ -650,35 +650,35 @@ var app = (function () {
 				i2 = element("i");
 				i2.textContent = "link";
 				t11 = space();
-				img.className = "activator svelte-nmlkgf";
+				img.className = "activator svelte-1u5ap9y";
 				img.src = img_src_value = "\n              " + ctx.example.img + "\n              ";
 				img.alt = img_alt_value = "\n              " + ctx.example.type;
-				add_location(img, file, 89, 12, 2515);
-				div0.className = "card-image waves-effect waves-block waves-light svelte-nmlkgf";
-				add_location(div0, file, 88, 10, 2441);
+				add_location(img, file, 94, 12, 2758);
+				div0.className = "card-image waves-effect waves-block waves-light svelte-1u5ap9y";
+				add_location(div0, file, 93, 10, 2684);
 				i0.className = "material-icons right";
-				add_location(i0, file, 100, 14, 2829);
-				span0.className = "card-title activator darken-4-text svelte-nmlkgf";
-				add_location(span0, file, 98, 12, 2735);
-				div1.className = "card-content svelte-nmlkgf";
-				add_location(div1, file, 97, 10, 2696);
+				add_location(i0, file, 105, 14, 3072);
+				span0.className = "card-title activator darken-4-text svelte-1u5ap9y";
+				add_location(span0, file, 103, 12, 2978);
+				div1.className = "card-content svelte-1u5ap9y";
+				add_location(div1, file, 102, 10, 2939);
 				i1.className = "material-icons right";
-				add_location(i1, file, 107, 14, 3031);
-				span1.className = "card-title grey-text text-darken-4 svelte-nmlkgf";
-				add_location(span1, file, 105, 12, 2966);
-				add_location(p, file, 109, 12, 3105);
+				add_location(i1, file, 112, 14, 3274);
+				span1.className = "card-title grey-text text-darken-4 svelte-1u5ap9y";
+				add_location(span1, file, 110, 12, 3209);
+				add_location(p, file, 114, 12, 3348);
 				i2.className = "material-icons";
-				add_location(i2, file, 115, 14, 3311);
+				add_location(i2, file, 120, 14, 3554);
 				a.className = "collection-item right-align brown-text";
 				a.target = "_blank";
 				a.href = a_href_value = ctx.example.link;
-				add_location(a, file, 110, 12, 3146);
-				div2.className = "card-reveal svelte-nmlkgf";
-				add_location(div2, file, 104, 10, 2928);
-				div3.className = "card z-depth-3 svelte-nmlkgf";
-				add_location(div3, file, 87, 8, 2402);
-				div4.className = "carousel-cell svelte-nmlkgf";
-				add_location(div4, file, 86, 2, 2366);
+				add_location(a, file, 115, 12, 3389);
+				div2.className = "card-reveal svelte-1u5ap9y";
+				add_location(div2, file, 109, 10, 3171);
+				div3.className = "card z-depth-3 svelte-1u5ap9y";
+				add_location(div3, file, 92, 8, 2645);
+				div4.className = "carousel-cell svelte-1u5ap9y";
+				add_location(div4, file, 91, 6, 2609);
 			},
 
 			m: function mount(target, anchor) {
@@ -742,15 +742,15 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 				div0.className = "divider";
-				add_location(div0, file, 77, 2, 2149);
+				add_location(div0, file, 82, 2, 2388);
 				div1.className = "row";
-				add_location(div1, file, 76, 0, 2129);
+				add_location(div1, file, 81, 0, 2368);
 				h4.className = "flow-text bolder darken-4-text center-align";
-				add_location(h4, file, 80, 2, 2211);
+				add_location(h4, file, 85, 2, 2450);
 				div2.className = "main-carousel";
-				add_location(div2, file, 83, 4, 2305);
-				div3.className = "row habilities svelte-nmlkgf";
-				add_location(div3, file, 79, 0, 2180);
+				add_location(div2, file, 88, 2, 2542);
+				div3.className = "row habilities svelte-1u5ap9y";
+				add_location(div3, file, 84, 0, 2419);
 			},
 
 			l: function claim(nodes) {
@@ -821,7 +821,15 @@ var app = (function () {
 	      link: "https://github.com/danieljtorres/b1b"
 	    },
 	    {
-	      img: is_prod() + "images/nodejs-logo.svg",
+	      img: is_prod() + "images/ultimoo.jpeg",
+	      type: "wordpress",
+	      title: "Ultimoo",
+	      description:
+	        "Sitio web corporativo, ajustes en estructura, cambios visuales a sitio existente.",
+	      link: "https://ultimoo.com/"
+	    },
+	    {
+	      img: is_prod() + "images/logo-editor.jpeg",
 	      type: "Nodejs",
 	      title: "Diseñador de logos.",
 	      description:
@@ -829,7 +837,7 @@ var app = (function () {
 	      link: "https://github.com/BazamIdeas/disenador"
 	    },
 	    {
-	      img: is_prod() + "images/angular-logo.svg",
+	      img: is_prod() + "images/gase.png",
 	      type: "Angular",
 	      title: "GASE",
 	      description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
@@ -1686,7 +1694,7 @@ var app = (function () {
 				div0 = element("div");
 				button0 = element("button");
 				i0 = element("i");
-				i0.textContent = "build";
+				i0.textContent = "cloud_download";
 				t2 = space();
 				ul = element("ul");
 				li = element("li");
@@ -1710,48 +1718,48 @@ var app = (function () {
 				footer.$$.fragment.c();
 				meta0.name = "description";
 				meta0.content = "Se que normalmente aqui debo colocar una descripción, pero prefiero\n    que entres a ver lo que prepare.";
-				add_location(meta0, file$4, 38, 2, 921);
+				add_location(meta0, file$4, 43, 2, 1208);
 				meta1.name = "twitter:card";
 				attr(meta1, "value", "summary");
-				add_location(meta1, file$4, 43, 2, 1075);
+				add_location(meta1, file$4, 48, 2, 1362);
 				attr(meta2, "property", "og:title");
 				meta2.content = "Michel Novellino Dev";
-				add_location(meta2, file$4, 45, 2, 1123);
+				add_location(meta2, file$4, 50, 2, 1410);
 				attr(meta3, "property", "og:type");
 				meta3.content = "article";
-				add_location(meta3, file$4, 46, 2, 1185);
+				add_location(meta3, file$4, 51, 2, 1472);
 				attr(meta4, "property", "og:url");
 				meta4.content = "http://www.michelnovelino.com";
-				add_location(meta4, file$4, 47, 2, 1233);
+				add_location(meta4, file$4, 52, 2, 1520);
 				attr(meta5, "property", "og:image");
 				meta5.content = "http://www.michelnovelino.com/public/images/logo.jpeg";
-				add_location(meta5, file$4, 48, 2, 1302);
+				add_location(meta5, file$4, 53, 2, 1589);
 				attr(meta6, "property", "og:description");
 				meta6.content = "Desarrollo movil - WebApps y más";
-				add_location(meta6, file$4, 51, 2, 1405);
+				add_location(meta6, file$4, 56, 2, 1692);
 				i0.className = "large material-icons";
-				add_location(i0, file$4, 56, 4, 1602);
+				add_location(i0, file$4, 61, 4, 1889);
 				attr(button0, "href", "#");
 				button0.className = "btn-floating btn-large darkness-general";
-				add_location(button0, file$4, 55, 2, 1532);
+				add_location(button0, file$4, 60, 2, 1819);
 				i1.className = "material-icons";
-				add_location(i1, file$4, 61, 8, 1755);
+				add_location(i1, file$4, 66, 8, 2049);
 				button1.className = "btn-floating darkness-general";
-				add_location(button1, file$4, 60, 6, 1680);
-				add_location(li, file$4, 59, 4, 1669);
-				add_location(ul, file$4, 58, 2, 1660);
+				add_location(button1, file$4, 65, 6, 1974);
+				add_location(li, file$4, 64, 4, 1963);
+				add_location(ul, file$4, 63, 2, 1954);
 				div0.className = "fixed-action-btn";
-				add_location(div0, file$4, 54, 0, 1499);
+				add_location(div0, file$4, 59, 0, 1786);
 				div1.className = "col s12 m4 l3 sidebar-container svelte-108qmvx";
-				add_location(div1, file$4, 68, 2, 1861);
+				add_location(div1, file$4, 73, 2, 2155);
 				div2.className = "col 12 m8 l9";
-				add_location(div2, file$4, 72, 2, 1935);
+				add_location(div2, file$4, 77, 2, 2229);
 				div3.className = "row";
-				add_location(div3, file$4, 67, 0, 1841);
+				add_location(div3, file$4, 72, 0, 2135);
 				div4.className = "row";
-				add_location(div4, file$4, 77, 0, 1993);
+				add_location(div4, file$4, 82, 0, 2287);
 				div5.className = "row";
-				add_location(div5, file$4, 80, 0, 2035);
+				add_location(div5, file$4, 85, 0, 2329);
 				dispose = listen(button1, "click", download);
 			},
 
@@ -1865,15 +1873,21 @@ var app = (function () {
 		};
 	}
 
-	function download(){
-	 fetch(`/downloads/michelnovellino-cv.pdf`)
-	.then(function(response) {
-	  return response.json();
-	})
-	.then(function(myJson) {
-	  console.log(myJson);
-	});
-	 }
+	function download() {
+	  fetch(`/downloads/michelnovellino-cv.pdf`)
+	    .then(resp => resp.blob())
+	    .then(blob => {
+	      const url = window.URL.createObjectURL(blob);
+	      const a = document.createElement("a");
+	      a.style.display = "none";
+	      a.href = url;
+	      a.download = "michelnovellino-cv.pdf";
+	      document.body.appendChild(a);
+	      a.click();
+	      window.URL.revokeObjectURL(url);
+	    })
+	    .catch(() => alert("oh no!"));
+	}
 
 	function instance$3($$self) {
 		
