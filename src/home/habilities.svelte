@@ -5,8 +5,16 @@
   import is_prod from "../enviroments/production";
   var visible;
   let examples = [
+        {
+      img: is_prod() + "images/niccolo-min.jpeg",
+      type: "wordpress",
+      title: "Niccolo",
+      description:
+        "Landing page para empresa de transporte en argentina.",
+      link: "http://rossisrl.com.ar/"
+    },
     {
-      img: is_prod() + "images/evita.jpeg",
+      img: is_prod() + "images/evita-min.jpeg",
       type: "wordpress",
       title: "Grupo Evita",
       description:
@@ -14,7 +22,7 @@
       link: "http://grupoevita.com/"
     },
     {
-      img: is_prod() + "images/ultimoo.jpeg",
+      img: is_prod() + "images/ultimoo-min.jpeg",
       type: "wordpress",
       title: "Ultimoo",
       description:
@@ -22,7 +30,7 @@
       link: "https://ultimoo.com/"
     },
     {
-      img: is_prod() + "images/logo-editor.jpeg",
+      img: is_prod() + "images/logo-editor-min.jpeg",
       type: "Nodejs",
       title: "Diseñador de logos.",
       description:
@@ -30,7 +38,7 @@
       link: "https://github.com/BazamIdeas/disenador"
     },
     {
-      img: is_prod() + "images/gase.png",
+      img: is_prod() + "images/gase-min.jpeg",
       type: "Angular",
       title: "GASE",
       description: `hecho en angularjs 1x y utilizando ionic 2 se hizo una aplicación para el registro de asistencias 
@@ -38,7 +46,7 @@
       link: "https://github.com/LDTorres/Administrador-de-asistencias"
     },
     {
-      img: is_prod() + "images/school-control.jpeg",
+      img: is_prod() + "images/school-control-min.jpeg",
       type: "ionic",
       title: "School Control",
       description:
@@ -46,7 +54,7 @@
       link: "#"
     },
     {
-      img: is_prod() + "images/ionic-logo.svg",
+      img: is_prod() + "images/no-image.jpeg",
       type: "Ionic",
       title: "Chat con firebase",
       description:
@@ -54,7 +62,7 @@
       link: "https://github.com/michelnovellino/ionic-firebase-chat"
     },
     {
-      img: is_prod() + "images/vue-logo.svg",
+      img: is_prod() + "images/no-image.jpeg",
       type: "Vuejs",
       title: "B1B",
       description: "Sistema de gestion bursátil de inversiones y referidos.",

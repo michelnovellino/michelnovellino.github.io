@@ -41,7 +41,7 @@
 
 <div class="card z-depth-3 s12 sidebar">
   <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="{is_prod()}images/logo.jpeg " alt="profile" />
+    <img class="activator" src="{is_prod()}images/logo-min.jpeg " alt="profile" />
   </div>
   <div class="card-content">
     <span class="card-title yellow-general-text">Michel Novellino</span>
