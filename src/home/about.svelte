@@ -1,6 +1,9 @@
+
 <script>
+
   import is_prod from '../enviroments/production';
-z
+/* 	import { onMount } from 'svelte';
+ */
 
   let work_experience = [
     {
@@ -35,10 +38,17 @@ z
       duration: "diciembre 2018 - hasta la fecha"
     }
   ];
+/*     var canvas;
 
+  	onMount(() => {
+          const ctx = canvas.getContext('2d');
+          ctx.font = "30px Arial";
+          ctx.fillText(Message,30,30);
+    })
+
+ */
 
 </script>
-
 <style>
   .row p,
   .row h4 {
@@ -66,7 +76,13 @@ z
         proactivo a la resolución de problemas y retos que se presenten en el
         cumplimiento de los objetivos fijados.
       </p>
-
+<!-- 
+      <canvas
+        bind:this={canvas}
+        width={32}
+        height={32}
+      ></canvas>
+ -->
     </div>
     <div class="row">
       <div class="divider" />

@@ -10,6 +10,7 @@ $('document').ready(function(callback){
     let instances = M.FloatingActionButton.init(elems, {
       direction: 'left'
     });
+
   }
 function initCarousel(callback){
 

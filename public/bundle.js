@@ -1177,7 +1177,7 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (80:4) {#each work_experience as experience}
+	// (96:4) {#each work_experience as experience}
 	function create_each_block$2(ctx) {
 		var div, h4, t0_value = ctx.experience.title, t0, t1, p0, t2_value = ctx.experience.duration, t2, t3, p1, t4_value = ctx.experience.description, t4;
 
@@ -1193,13 +1193,13 @@ var app = (function () {
 				p1 = element("p");
 				t4 = text(t4_value);
 				h4.className = "flow-text darken-4-text svelte-nll4i8";
-				add_location(h4, file$2, 81, 8, 2546);
+				add_location(h4, file$2, 97, 8, 2865);
 				p0.className = "darken-4-text bolder svelte-nll4i8";
-				add_location(p0, file$2, 82, 8, 2614);
+				add_location(p0, file$2, 98, 8, 2933);
 				p1.className = "darken-4-text svelte-nll4i8";
-				add_location(p1, file$2, 83, 8, 2680);
+				add_location(p1, file$2, 99, 8, 2999);
 				div.className = "row svelte-nll4i8";
-				add_location(div, file$2, 80, 6, 2520);
+				add_location(div, file$2, 96, 6, 2839);
 			},
 
 			m: function mount(target, anchor) {
@@ -1280,47 +1280,47 @@ var app = (function () {
 				img0.alt = "person";
 				img0.src = img0_src_value = "" + is_prod() + "images/person.png";
 				img0.className = "svelte-nll4i8";
-				add_location(img0, file$2, 58, 8, 1794);
+				add_location(img0, file$2, 68, 8, 2006);
 				h40.className = "flow-text darken-4-text bolder align-titles svelte-nll4i8";
-				add_location(h40, file$2, 57, 6, 1729);
+				add_location(h40, file$2, 67, 6, 1941);
 				p0.className = "darken-4-text svelte-nll4i8";
-				add_location(p0, file$2, 62, 6, 1886);
+				add_location(p0, file$2, 72, 6, 2098);
 				div0.className = "row svelte-nll4i8";
-				add_location(div0, file$2, 56, 4, 1705);
+				add_location(div0, file$2, 66, 4, 1917);
 				div1.className = "divider";
-				add_location(div1, file$2, 71, 6, 2242);
+				add_location(div1, file$2, 87, 6, 2561);
 				div2.className = "row";
-				add_location(div2, file$2, 70, 4, 2218);
+				add_location(div2, file$2, 86, 4, 2537);
 				img1.src = img1_src_value = "" + is_prod() + "images/gear.png";
 				img1.alt = "person-icon";
 				img1.className = "svelte-nll4i8";
-				add_location(img1, file$2, 75, 8, 2370);
+				add_location(img1, file$2, 91, 8, 2689);
 				h41.className = "flow-text bolder darken-4-text align-titles svelte-nll4i8";
-				add_location(h41, file$2, 74, 6, 2305);
+				add_location(h41, file$2, 90, 6, 2624);
 				div3.className = "row svelte-nll4i8";
-				add_location(div3, file$2, 73, 4, 2281);
+				add_location(div3, file$2, 89, 4, 2600);
 				div4.className = "divider";
-				add_location(div4, file$2, 87, 6, 2789);
+				add_location(div4, file$2, 103, 6, 3108);
 				div5.className = "row";
-				add_location(div5, file$2, 86, 4, 2765);
+				add_location(div5, file$2, 102, 4, 3084);
 				img2.alt = "education";
 				img2.src = img2_src_value = "" + is_prod() + "images/education.png";
 				img2.className = "svelte-nll4i8";
-				add_location(img2, file$2, 91, 8, 2917);
+				add_location(img2, file$2, 107, 8, 3236);
 				h42.className = "flow-text bolder darken-4-text align-titles svelte-nll4i8";
-				add_location(h42, file$2, 90, 6, 2852);
+				add_location(h42, file$2, 106, 6, 3171);
 				h43.className = "flow-text darken-4-text svelte-nll4i8";
-				add_location(h43, file$2, 95, 6, 3016);
+				add_location(h43, file$2, 111, 6, 3335);
 				p1.className = "darken-4-text bolder svelte-nll4i8";
-				add_location(p1, file$2, 96, 6, 3096);
+				add_location(p1, file$2, 112, 6, 3415);
 				p2.className = "darken-4-text svelte-nll4i8";
-				add_location(p2, file$2, 97, 6, 3150);
+				add_location(p2, file$2, 113, 6, 3469);
 				div6.className = "row svelte-nll4i8";
-				add_location(div6, file$2, 89, 4, 2828);
+				add_location(div6, file$2, 105, 4, 3147);
 				div7.className = "col s12 m12";
-				add_location(div7, file$2, 55, 2, 1675);
+				add_location(div7, file$2, 65, 2, 1887);
 				div8.className = "row";
-				add_location(div8, file$2, 54, 0, 1655);
+				add_location(div8, file$2, 64, 0, 1867);
 			},
 
 			l: function claim(nodes) {
@@ -1403,6 +1403,8 @@ var app = (function () {
 	}
 
 	function instance$2($$self) {
+		/* 	import { onMount } from 'svelte';
+	 */
 
 	  let work_experience = [
 	    {
@@ -1437,6 +1439,15 @@ var app = (function () {
 	      duration: "diciembre 2018 - hasta la fecha"
 	    }
 	  ];
+	/*     var canvas;
+
+	  	onMount(() => {
+	          const ctx = canvas.getContext('2d');
+	          ctx.font = "30px Arial";
+	          ctx.fillText(Message,30,30);
+	    })
+
+	 */
 
 		return { work_experience };
 	}
