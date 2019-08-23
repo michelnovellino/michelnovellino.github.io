@@ -6,11 +6,12 @@
   var visible;
   let examples = [
     {
-      img: is_prod() + "images/vue-logo.svg",
-      type: "Vuejs",
-      title: "B1B",
-      description: "Sistema de gestion bursátil de inversiones y referidos.",
-      link: "https://github.com/danieljtorres/b1b"
+      img: is_prod() + "images/evita.jpeg",
+      type: "wordpress",
+      title: "Grupo Evita",
+      description:
+        "Ecommerce de materiales de contruccion, hecho en wordpress.",
+      link: "http://grupoevita.com/"
     },
     {
       img: is_prod() + "images/ultimoo.jpeg",
@@ -37,12 +38,27 @@
       link: "https://github.com/LDTorres/Administrador-de-asistencias"
     },
     {
+      img: is_prod() + "images/school-control.jpeg",
+      type: "ionic",
+      title: "School Control",
+      description:
+        "Sistema de seguridad recoleccion de niños en las escuelas, frontend en ionic 3.",
+      link: "#"
+    },
+    {
       img: is_prod() + "images/ionic-logo.svg",
       type: "Ionic",
       title: "Chat con firebase",
       description:
         "Chat simple con ionic y firebase, con algunas funciones extra.",
       link: "https://github.com/michelnovellino/ionic-firebase-chat"
+    },
+    {
+      img: is_prod() + "images/vue-logo.svg",
+      type: "Vuejs",
+      title: "B1B",
+      description: "Sistema de gestion bursátil de inversiones y referidos.",
+      link: "https://github.com/danieljtorres/b1b"
     }
   ];
   var loader, loader_status;
@@ -64,7 +80,7 @@
     background: #444 !important;
   }
   .habilities .card img.activator {
-    height: 18rem;
+    height: 15rem;
   }
   /*   .collection-item {
     display: flex;
@@ -73,9 +89,25 @@
     justify-content: flex-end;
   } */
   .carousel-cell {
-    width: 40%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width: 25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .custom-card-image {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    min-height: 15rem;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
   }
 </style>
 
@@ -91,15 +123,10 @@
     {#each examples as example}
       <div class="carousel-cell">
         <div class="card z-depth-3">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img
-              class="activator"
-              src="
-              {example.img}
-              "
-              alt="
-              {example.type}" />
-          </div>
+          <div
+            class="card-image custom-card-image waves-effect waves-block
+            waves-light"
+            style="background:url({example.img})" />
           <div class="card-content">
             <span class="card-title activator darken-4-text">
               {example.title}

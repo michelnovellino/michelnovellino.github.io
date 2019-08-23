@@ -619,16 +619,15 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (91:4) {#each examples as example}
+	// (123:4) {#each examples as example}
 	function create_each_block(ctx) {
-		var div4, div3, div0, img, img_src_value, img_alt_value, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11;
+		var div4, div3, div0, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11;
 
 		return {
 			c: function create() {
 				div4 = element("div");
 				div3 = element("div");
 				div0 = element("div");
-				img = element("img");
 				t0 = space();
 				div1 = element("div");
 				span0 = element("span");
@@ -650,42 +649,38 @@ var app = (function () {
 				i2 = element("i");
 				i2.textContent = "link";
 				t11 = space();
-				img.className = "activator svelte-1u5ap9y";
-				img.src = img_src_value = "\n              " + ctx.example.img + "\n              ";
-				img.alt = img_alt_value = "\n              " + ctx.example.type;
-				add_location(img, file, 94, 12, 2758);
-				div0.className = "card-image waves-effect waves-block waves-light svelte-1u5ap9y";
-				add_location(div0, file, 93, 10, 2684);
+				div0.className = "card-image custom-card-image waves-effect waves-block\n            waves-light svelte-dlmlnj";
+				set_style(div0, "background", "url(" + ctx.example.img + ")");
+				add_location(div0, file, 125, 10, 3536);
 				i0.className = "material-icons right";
-				add_location(i0, file, 105, 14, 3072);
-				span0.className = "card-title activator darken-4-text svelte-1u5ap9y";
-				add_location(span0, file, 103, 12, 2978);
-				div1.className = "card-content svelte-1u5ap9y";
-				add_location(div1, file, 102, 10, 2939);
+				add_location(i0, file, 132, 14, 3835);
+				span0.className = "card-title activator darken-4-text svelte-dlmlnj";
+				add_location(span0, file, 130, 12, 3741);
+				div1.className = "card-content svelte-dlmlnj";
+				add_location(div1, file, 129, 10, 3702);
 				i1.className = "material-icons right";
-				add_location(i1, file, 112, 14, 3274);
-				span1.className = "card-title grey-text text-darken-4 svelte-1u5ap9y";
-				add_location(span1, file, 110, 12, 3209);
-				add_location(p, file, 114, 12, 3348);
+				add_location(i1, file, 139, 14, 4037);
+				span1.className = "card-title grey-text text-darken-4 svelte-dlmlnj";
+				add_location(span1, file, 137, 12, 3972);
+				add_location(p, file, 141, 12, 4111);
 				i2.className = "material-icons";
-				add_location(i2, file, 120, 14, 3554);
+				add_location(i2, file, 147, 14, 4317);
 				a.className = "collection-item right-align brown-text";
 				a.target = "_blank";
 				a.href = a_href_value = ctx.example.link;
-				add_location(a, file, 115, 12, 3389);
-				div2.className = "card-reveal svelte-1u5ap9y";
-				add_location(div2, file, 109, 10, 3171);
-				div3.className = "card z-depth-3 svelte-1u5ap9y";
-				add_location(div3, file, 92, 8, 2645);
-				div4.className = "carousel-cell svelte-1u5ap9y";
-				add_location(div4, file, 91, 6, 2609);
+				add_location(a, file, 142, 12, 4152);
+				div2.className = "card-reveal svelte-dlmlnj";
+				add_location(div2, file, 136, 10, 3934);
+				div3.className = "card z-depth-3 svelte-dlmlnj";
+				add_location(div3, file, 124, 8, 3497);
+				div4.className = "carousel-cell svelte-dlmlnj";
+				add_location(div4, file, 123, 6, 3461);
 			},
 
 			m: function mount(target, anchor) {
 				insert(target, div4, anchor);
 				append(div4, div3);
 				append(div3, div0);
-				append(div0, img);
 				append(div3, t0);
 				append(div3, div1);
 				append(div1, span0);
@@ -706,7 +701,11 @@ var app = (function () {
 				append(div4, t11);
 			},
 
-			p: noop,
+			p: function update(changed, ctx) {
+				if (changed.examples) {
+					set_style(div0, "background", "url(" + ctx.example.img + ")");
+				}
+			},
 
 			d: function destroy(detaching) {
 				if (detaching) {
@@ -742,15 +741,15 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 				div0.className = "divider";
-				add_location(div0, file, 82, 2, 2388);
+				add_location(div0, file, 114, 2, 3240);
 				div1.className = "row";
-				add_location(div1, file, 81, 0, 2368);
+				add_location(div1, file, 113, 0, 3220);
 				h4.className = "flow-text bolder darken-4-text center-align";
-				add_location(h4, file, 85, 2, 2450);
+				add_location(h4, file, 117, 2, 3302);
 				div2.className = "main-carousel";
-				add_location(div2, file, 88, 2, 2542);
-				div3.className = "row habilities svelte-1u5ap9y";
-				add_location(div3, file, 84, 0, 2419);
+				add_location(div2, file, 120, 2, 3394);
+				div3.className = "row habilities svelte-dlmlnj";
+				add_location(div3, file, 116, 0, 3271);
 			},
 
 			l: function claim(nodes) {
@@ -814,11 +813,12 @@ var app = (function () {
 	  var visible;
 	  let examples = [
 	    {
-	      img: is_prod() + "images/vue-logo.svg",
-	      type: "Vuejs",
-	      title: "B1B",
-	      description: "Sistema de gestion bursátil de inversiones y referidos.",
-	      link: "https://github.com/danieljtorres/b1b"
+	      img: is_prod() + "images/evita.jpeg",
+	      type: "wordpress",
+	      title: "Grupo Evita",
+	      description:
+	        "Ecommerce de materiales de contruccion, hecho en wordpress.",
+	      link: "http://grupoevita.com/"
 	    },
 	    {
 	      img: is_prod() + "images/ultimoo.jpeg",
@@ -845,12 +845,27 @@ var app = (function () {
 	      link: "https://github.com/LDTorres/Administrador-de-asistencias"
 	    },
 	    {
+	      img: is_prod() + "images/school-control.jpeg",
+	      type: "ionic",
+	      title: "School Control",
+	      description:
+	        "Sistema de seguridad recoleccion de niños en las escuelas, frontend en ionic 3.",
+	      link: "#"
+	    },
+	    {
 	      img: is_prod() + "images/ionic-logo.svg",
 	      type: "Ionic",
 	      title: "Chat con firebase",
 	      description:
 	        "Chat simple con ionic y firebase, con algunas funciones extra.",
 	      link: "https://github.com/michelnovellino/ionic-firebase-chat"
+	    },
+	    {
+	      img: is_prod() + "images/vue-logo.svg",
+	      type: "Vuejs",
+	      title: "B1B",
+	      description: "Sistema de gestion bursátil de inversiones y referidos.",
+	      link: "https://github.com/danieljtorres/b1b"
 	    }
 	  ];
 	  var loader, loader_status;
