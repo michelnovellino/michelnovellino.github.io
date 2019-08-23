@@ -41,21 +41,36 @@
 </style>
 
 <svelte:head>
-  <meta
-    name="description"
-    content="Se que normalmente aqui debo colocar una descripción, pero prefiero
-    que entres a ver lo que prepare." />
-
-  <meta name="twitter:card" value="summary" />
 
   <meta property="og:title" content="Michel Novellino Dev" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="http://www.michelnovelino.com" />
+  <meta property="og:description" content="Desarrollo movil - WebApps y más" />
+  <meta property="og:site_name" content="CV online" />
+
   <meta
     property="og:image"
     content="http://www.michelnovellino.com/public/images/logo.jpeg" />
-  <meta property="og:description" content="Desarrollo movil - WebApps y más" />
+  <meta
+    property="og:image:secure_url"
+    content="https://www.michelnovellino.com/public/images/logo.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="Un logo muy bonito que me pertenece" />
 
+<!-- twitter og tags -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@sr_novellino" />
+<meta name="twitter:creator" content="@sr_novellino" />
+
+<meta name="twitter:url" content="https://www.michelnovellino.com/" />
+
+<meta name="twitter:description" content="Se que normalmente aqui debo colocar una descripción, pero prefiero
+    que entres a ver lo que prepare." />
+
+<meta name="twitter:image" content="https://www.michelnovellino.com/public/images/logo.jpeg"/>
 </svelte:head>
 
 <div class="fixed-action-btn">
