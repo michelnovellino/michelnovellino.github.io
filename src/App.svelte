@@ -53,10 +53,11 @@
   <meta property="og:url" content="http://www.michelnovelino.com" />
   <meta
     property="og:image"
-    content="http://www.michelnovelino.com/public/images/logo.jpeg" />
+    content="http://www.michelnovellino.com/public/images/logo.jpeg" />
   <meta property="og:description" content="Desarrollo movil - WebApps y más" />
 
 </svelte:head>
+
 <div class="fixed-action-btn">
   <button href="#" class="btn-floating btn-large darkness-general">
     <i class="large material-icons">cloud_download</i>
