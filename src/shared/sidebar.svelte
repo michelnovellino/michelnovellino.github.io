@@ -1,5 +1,8 @@
 <script>
-	import { fly } from 'svelte/transition';
+  import { onMount, onDestroy} from "svelte";
+
+	import { fade } from 'svelte/transition';
+	import { elasticOut } from 'svelte/easing';
 
   import is_prod from "../enviroments/production";
   let habilities = [
@@ -15,6 +18,20 @@
     { title: "Mysql" },
     { title: "MongoDb" }
   ];
+  let visible;
+  onMount(() => {visible = true});
+  onDestroy(() => (visible = false));
+
+	function some(node, { params}) {
+		const existingTransform = getComputedStyle(node).transform.replace('none', '');
+		return {
+			delay: params.delay || 1,
+			duration: params.duration || 5000,
+			easing: params.easing || elasticOut,
+			css: (t, u) => `transform: ${existingTransform} scale(${t})`
+		};
+	}
+  
 </script>
 
 <style>
@@ -51,7 +68,9 @@
     <span class="card-tittle yellow-general-text ">HABILIDADES</span>
     <ul class="collection">
     {#each habilities as hability}
-      <li class="collection-item white-text" transition:fly="{{ y: 200, duration: 2000 }}">{hability.title}</li>
+      {#if visible}
+            <li class="collection-item white-text " transition:some={{params:{}}}>{hability.title}</li>
+      {/if}
     {/each }
     </ul>
 
