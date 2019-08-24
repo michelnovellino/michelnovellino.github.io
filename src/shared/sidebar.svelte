@@ -25,6 +25,15 @@
 	function some(node, { params}) {
 		const existingTransform = getComputedStyle(node).transform.replace('none', '');
 		return {
+			delay: params.delay || 5,
+			duration: params.duration || 5000,
+			easing: params.easing || elasticOut,
+			css: (t, u) => `transform: ${existingTransform} scale(${t})`
+		};
+  }
+  	function toDown(node, { params}) {
+		const existingTransform = getComputedStyle(node).transform.replace('none', '');
+		return {
 			delay: params.delay || 1,
 			duration: params.duration || 5000,
 			easing: params.easing || elasticOut,
@@ -67,9 +76,9 @@
     </div>
     <span class="card-tittle yellow-general-text ">HABILIDADES</span>
     <ul class="collection">
-    {#each habilities as hability}
+    {#each habilities as hability, index}
       {#if visible}
-            <li class="collection-item white-text " transition:some={{params:{}}}>{hability.title}</li>
+            <li class="collection-item white-text " transition:some={{params:{duration:5000 * index * 300 }}}>{hability.title}</li>
       {/if}
     {/each }
     </ul>
