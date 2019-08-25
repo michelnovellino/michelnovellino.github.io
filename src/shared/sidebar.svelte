@@ -22,7 +22,7 @@
   onMount(() => {visible = true});
   onDestroy(() => (visible = false));
 
-	function some(node, { params}) {
+	function stagger(node, { params}) {
 		const existingTransform = getComputedStyle(node).transform.replace('none', '');
 		return {
 			delay: params.delay || 1,
@@ -69,7 +69,7 @@
     <ul class="collection">
     {#each habilities as hability,index}
       {#if visible}
-            <li class="collection-item white-text " transition:some={{params:{duration:5000 + index * 300}}}>{hability.title}</li>
+            <li class="collection-item white-text " transition:stagger={{params:{duration:5000 + index * 300}}}>{hability.title}</li>
       {/if}
     {/each }
     </ul>

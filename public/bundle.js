@@ -604,7 +604,7 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (131:4) {#each examples as example}
+	// (93:4) {#each examples as example}
 	function create_each_block(ctx) {
 		var div4, div3, div0, t0, div1, span0, t1_value = ctx.example.title, t1, t2, i0, t4, div2, span1, i1, t6, p, t7_value = ctx.example.description, t7, t8, a, t9, i2, a_href_value, t11;
 
@@ -634,32 +634,32 @@ var app = (function () {
 				i2 = element("i");
 				i2.textContent = "link";
 				t11 = space();
-				div0.className = "card-image custom-card-image waves-effect waves-block\n            waves-light svelte-dlmlnj";
+				div0.className = "card-image custom-card-image waves-effect waves-block\n            waves-light";
 				set_style(div0, "background", "url(" + ctx.example.img + ")");
-				add_location(div0, file, 133, 10, 3795);
+				add_location(div0, file, 95, 10, 2965);
 				i0.className = "material-icons right";
-				add_location(i0, file, 140, 14, 4094);
-				span0.className = "card-title activator darken-4-text svelte-dlmlnj";
-				add_location(span0, file, 138, 12, 4000);
-				div1.className = "card-content svelte-dlmlnj";
-				add_location(div1, file, 137, 10, 3961);
+				add_location(i0, file, 102, 14, 3264);
+				span0.className = "card-title activator darken-4-text";
+				add_location(span0, file, 100, 12, 3170);
+				div1.className = "card-content";
+				add_location(div1, file, 99, 10, 3131);
 				i1.className = "material-icons right";
-				add_location(i1, file, 147, 14, 4296);
-				span1.className = "card-title grey-text text-darken-4 svelte-dlmlnj";
-				add_location(span1, file, 145, 12, 4231);
-				add_location(p, file, 149, 12, 4370);
+				add_location(i1, file, 109, 14, 3466);
+				span1.className = "card-title grey-text text-darken-4";
+				add_location(span1, file, 107, 12, 3401);
+				add_location(p, file, 111, 12, 3540);
 				i2.className = "material-icons";
-				add_location(i2, file, 155, 14, 4576);
+				add_location(i2, file, 117, 14, 3746);
 				a.className = "collection-item right-align brown-text";
 				a.target = "_blank";
 				a.href = a_href_value = ctx.example.link;
-				add_location(a, file, 150, 12, 4411);
-				div2.className = "card-reveal svelte-dlmlnj";
-				add_location(div2, file, 144, 10, 4193);
-				div3.className = "card z-depth-3 svelte-dlmlnj";
-				add_location(div3, file, 132, 8, 3756);
-				div4.className = "carousel-cell svelte-dlmlnj";
-				add_location(div4, file, 131, 6, 3720);
+				add_location(a, file, 112, 12, 3581);
+				div2.className = "card-reveal";
+				add_location(div2, file, 106, 10, 3363);
+				div3.className = "card z-depth-3";
+				add_location(div3, file, 94, 8, 2926);
+				div4.className = "carousel-cell";
+				add_location(div4, file, 93, 6, 2890);
 			},
 
 			m: function mount(target, anchor) {
@@ -726,15 +726,15 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 				div0.className = "divider";
-				add_location(div0, file, 122, 2, 3499);
+				add_location(div0, file, 84, 2, 2669);
 				div1.className = "row";
-				add_location(div1, file, 121, 0, 3479);
+				add_location(div1, file, 83, 0, 2649);
 				h4.className = "flow-text bolder darken-4-text center-align";
-				add_location(h4, file, 125, 2, 3561);
+				add_location(h4, file, 87, 2, 2731);
 				div2.className = "main-carousel";
-				add_location(div2, file, 128, 2, 3653);
-				div3.className = "row habilities svelte-dlmlnj";
-				add_location(div3, file, 124, 0, 3530);
+				add_location(div2, file, 90, 2, 2823);
+				div3.className = "row habilities";
+				add_location(div3, file, 86, 0, 2700);
 			},
 
 			l: function claim(nodes) {
@@ -866,6 +866,7 @@ var app = (function () {
 	    $$invalidate('visible', visible = true);
 	  }, 1200);
 	  onMount(async () => {});
+
 	  $$invalidate('loader', loader = document.getElementById("loader-container"));
 	  $$invalidate('loader_status', loader_status = getComputedStyle(loader));
 	  console.log(loader_status.display);
@@ -900,7 +901,7 @@ var app = (function () {
 				li = element("li");
 				t = text(t_value);
 				li.className = "collection-item white-text  svelte-1qwy0sq";
-				add_location(li, file$1, 71, 12, 1854);
+				add_location(li, file$1, 71, 12, 1857);
 			},
 
 			m: function mount(target, anchor) {
@@ -914,7 +915,7 @@ var app = (function () {
 			i: function intro(local) {
 				if (current) return;
 				add_render_callback(() => {
-					if (!li_transition) li_transition = create_bidirectional_transition(li, some, {params:{duration:5000 + ctx.index * 300}}, true);
+					if (!li_transition) li_transition = create_bidirectional_transition(li, stagger, {params:{duration:5000 + ctx.index * 300}}, true);
 					li_transition.run(1);
 				});
 
@@ -922,7 +923,7 @@ var app = (function () {
 			},
 
 			o: function outro(local) {
-				if (!li_transition) li_transition = create_bidirectional_transition(li, some, {params:{duration:5000 + ctx.index * 300}}, false);
+				if (!li_transition) li_transition = create_bidirectional_transition(li, stagger, {params:{duration:5000 + ctx.index * 300}}, false);
 				li_transition.run(0);
 
 				current = false;
@@ -1067,45 +1068,45 @@ var app = (function () {
 				img.className = "activator";
 				img.src = img_src_value = "" + is_prod() + "images/logo-min.jpeg ";
 				img.alt = "profile";
-				add_location(img, file$1, 60, 4, 1424);
+				add_location(img, file$1, 60, 4, 1427);
 				div0.className = "card-image waves-effect waves-block waves-light";
-				add_location(div0, file$1, 59, 2, 1358);
+				add_location(div0, file$1, 59, 2, 1361);
 				span0.className = "card-title yellow-general-text";
-				add_location(span0, file$1, 63, 4, 1545);
+				add_location(span0, file$1, 63, 4, 1548);
 				div1.className = "divider white";
-				add_location(div1, file$1, 65, 6, 1642);
+				add_location(div1, file$1, 65, 6, 1645);
 				div2.className = "row";
-				add_location(div2, file$1, 64, 4, 1618);
+				add_location(div2, file$1, 64, 4, 1621);
 				span1.className = "card-tittle yellow-general-text ";
-				add_location(span1, file$1, 67, 4, 1687);
+				add_location(span1, file$1, 67, 4, 1690);
 				ul0.className = "collection svelte-1qwy0sq";
-				add_location(ul0, file$1, 68, 4, 1757);
+				add_location(ul0, file$1, 68, 4, 1760);
 				span2.className = "card-tittle yellow-general-text";
-				add_location(span2, file$1, 76, 4, 2013);
+				add_location(span2, file$1, 76, 4, 2019);
 				i0.className = "material-icons svelte-1qwy0sq";
-				add_location(i0, file$1, 83, 8, 2264);
+				add_location(i0, file$1, 83, 8, 2270);
 				a0.className = "collection-item white-text svelte-1qwy0sq";
 				a0.target = "_blank";
 				a0.href = "https://github.com/michelnovellino/";
-				add_location(a0, file$1, 78, 6, 2119);
+				add_location(a0, file$1, 78, 6, 2125);
 				i1.className = "material-icons svelte-1qwy0sq";
-				add_location(i1, file$1, 90, 8, 2460);
+				add_location(i1, file$1, 90, 8, 2466);
 				a1.className = "collection-item white-text svelte-1qwy0sq";
 				a1.target = "_blank";
 				a1.href = "https://gitlab.com/michelnovellino";
-				add_location(a1, file$1, 85, 6, 2316);
+				add_location(a1, file$1, 85, 6, 2322);
 				i2.className = "material-icons svelte-1qwy0sq";
-				add_location(i2, file$1, 97, 8, 2669);
+				add_location(i2, file$1, 97, 8, 2675);
 				a2.className = "collection-item white-text svelte-1qwy0sq";
 				a2.target = "_blank";
 				a2.href = "https://www.linkedin.com/in/michel-novellino/";
-				add_location(a2, file$1, 92, 6, 2512);
+				add_location(a2, file$1, 92, 6, 2518);
 				ul1.className = "collection projects svelte-1qwy0sq";
-				add_location(ul1, file$1, 77, 4, 2080);
+				add_location(ul1, file$1, 77, 4, 2086);
 				div3.className = "card-content svelte-1qwy0sq";
-				add_location(div3, file$1, 62, 2, 1514);
+				add_location(div3, file$1, 62, 2, 1517);
 				div4.className = "card z-depth-3 s12 sidebar svelte-1qwy0sq";
-				add_location(div4, file$1, 58, 0, 1315);
+				add_location(div4, file$1, 58, 0, 1318);
 			},
 
 			l: function claim(nodes) {
@@ -1197,7 +1198,7 @@ var app = (function () {
 		};
 	}
 
-	function some(node, { params}) {
+	function stagger(node, { params}) {
 			const existingTransform = getComputedStyle(node).transform.replace('none', '');
 			return {
 				delay: params.delay || 1,

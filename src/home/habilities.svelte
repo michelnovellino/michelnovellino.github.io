@@ -74,50 +74,12 @@
     visible = true;
   }, 1200);
   onMount(async () => {});
+
   loader = document.getElementById("loader-container");
   loader_status = getComputedStyle(loader);
   console.log(loader_status.display);
 </script>
 
-<style>
-  .habilities span.card-title.activator {
-    color: #fafafa !important;
-    font-size: 20px !important;
-  }
-  .habilities .card {
-    background: #444 !important;
-  }
-  .habilities .card img.activator {
-    height: 15rem;
-  }
-  /*   .collection-item {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: flex-end;
-  } */
-  .carousel-cell {
-    width: 25%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .custom-card-image {
-    display: block;
-    border-radius: 2px 2px 0 0;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    width: 100%;
-    min-height: 15rem;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
-  }
-</style>
 
 <div class="row">
   <div class="divider" />
