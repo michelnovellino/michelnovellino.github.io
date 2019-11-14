@@ -1,8 +1,8 @@
 <script>
-  import { onMount, onDestroy} from "svelte";
+  import { onMount, onDestroy } from "svelte";
 
-	import { fade } from 'svelte/transition';
-	import { elasticOut } from 'svelte/easing';
+  import { fade } from "svelte/transition";
+  import { elasticOut } from "svelte/easing";
 
   import is_prod from "../enviroments/production";
   let habilities = [
@@ -13,25 +13,34 @@
     { title: "Nodejs" },
     { title: "Vuejs" },
     { title: "Angular" },
+    {title: "Boostrap"},
     { title: "MaterializeCss" },
     { title: "Wordpress" },
     { title: "Mysql" },
-    { title: "MongoDb" }
+    { title: "MongoDb" },
+    { title: "Dart" },
+    { title: "Flutter" },
+    { title: "Ionic" },
+    { title: "SvelteJs" }
   ];
   let visible;
-  onMount(() => {visible = true});
+  onMount(() => {
+    visible = true;
+  });
   onDestroy(() => (visible = false));
 
-	function stagger(node, { params}) {
-		const existingTransform = getComputedStyle(node).transform.replace('none', '');
-		return {
-			delay: params.delay || 1,
-			duration: params.duration || 5000,
-			easing: params.easing || elasticOut,
-			css: (t, u) => `transform: ${existingTransform} scale(${t})`
-		};
-	}
-  
+  function stagger(node, { params }) {
+    const existingTransform = getComputedStyle(node).transform.replace(
+      "none",
+      ""
+    );
+    return {
+      delay: params.delay || 1,
+      duration: params.duration || 5000,
+      easing: params.easing || elasticOut,
+      css: (t, u) => `transform: ${existingTransform} scale(${t})`
+    };
+  }
 </script>
 
 <style>
@@ -58,7 +67,10 @@
 
 <div class="card z-depth-3 s12 sidebar">
   <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="{is_prod()}images/logo-min.jpeg " alt="profile" />
+    <img
+      class="activator"
+      src="{is_prod()}images/logo-min.jpeg "
+      alt="profile" />
   </div>
   <div class="card-content">
     <span class="card-title yellow-general-text">Michel Novellino</span>
@@ -67,11 +79,15 @@
     </div>
     <span class="card-tittle yellow-general-text ">HABILIDADES</span>
     <ul class="collection">
-    {#each habilities as hability,index}
-      {#if visible}
-            <li class="collection-item white-text " transition:stagger={{params:{duration:5000 + index * 300}}}>{hability.title}</li>
-      {/if}
-    {/each }
+      {#each habilities as hability, index}
+        {#if visible}
+          <li
+            class="collection-item white-text "
+            transition:stagger={{ params: { duration: 5000 + index * 300 } }}>
+            {hability.title}
+          </li>
+        {/if}
+      {/each}
     </ul>
 
     <span class="card-tittle yellow-general-text">Proyectos</span>

@@ -35,7 +35,7 @@
         util, hasta los momentos entre los conocimientos que he obtenido con
         ellos destacan: Uso de scrum en entornos de trabajo en equipo,
         angularjs, angular en sus versiones 5 y 7, ionic en sus versiones 3 y 4.`,
-      duration: "diciembre 2018 - hasta la fecha"
+      duration: "2018 - 2019"
     }
   ];
 /*     var canvas;

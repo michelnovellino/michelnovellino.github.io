@@ -33,10 +33,10 @@ $('document').ready(function(callback){
   
   
   
-  /*  document.getElementById('loader-container').classList.add
+
+  });
+  
+    /*  document.getElementById('loader-container').classList.add
    var input = document.querySelector("#phone");
    window.intlTelInput(input);
     */
-  });
-  
-  
