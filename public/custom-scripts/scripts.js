@@ -2,6 +2,7 @@
   var input = document.querySelector("#phone");
   window.intlTelInput(input);
 });
+
  */
 $('document').ready(function(callback){
     console.log('deberia ejecutarse')
@@ -27,7 +28,7 @@ $('document').ready(function(callback){
   }
   
   function hideSlider(){
-    $(".loader-container").fadeOut(759);
+    //$(".loader-container").fadeOut(759);
   }
   initDownloadButton(initCarousel(hideSlider()));
   
