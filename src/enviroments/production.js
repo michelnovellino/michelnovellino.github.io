@@ -1,7 +1,6 @@
 var is_prod = function(){
-    var host = window.location.host;
-    console.log(host)
-    if(host){
+    var host = window.location.hostname;
+    if(host != "localhost"){
         return 'public/';
     }else{
         return './';
