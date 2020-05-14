@@ -7,6 +7,7 @@
   import Habilities from "./home/habilities.svelte";
   import Sidebar from "./shared/sidebar.svelte";
   import About from "./home/about.svelte";
+  import Post  from "./blog/post.svelte";
   import Contact from "./home/contact.svelte";
   import Footer from "./shared/footer.svelte";
   /*  import Footer from "./shared/footer.svelte";
@@ -50,10 +51,10 @@
 
   <meta
     property="og:image"
-    content="http://www.michelnovellino.com/public/images/logo.jpeg" />
+    content="https://www.michelnovellino.com/public/images/logo-min.jpeg" />
   <meta
     property="og:image:secure_url"
-    content="https://www.michelnovellino.com/public/images/logo.jpeg" />
+    content="https://www.michelnovellino.com/public/images/logo-min.jpeg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="400" />
   <meta property="og:image:height" content="300" />
@@ -70,7 +71,7 @@
 <meta name="twitter:description" content="Se que normalmente aqui debo colocar una descripción, pero prefiero
     que entres a ver lo que prepare." />
 
-<meta name="twitter:image" content="https://www.michelnovellino.com/public/images/logo.jpeg"/>
+<meta name="twitter:image" content="https://www.michelnovellino.com/public/images/logo-min.jpeg"/>
 </svelte:head>
 
 <div class="fixed-action-btn">
@@ -98,6 +99,9 @@
 </div>
 <div class="row">
   <Habilities />
+</div>
+<div class="row">
+<Post />
 </div>
 <div class="row">
   <Contact />

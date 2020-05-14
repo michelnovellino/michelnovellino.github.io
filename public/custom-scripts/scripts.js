@@ -4,8 +4,7 @@
 });
  */
 $('document').ready(function(callback){
-    console.log('deberia ejecutarse')
-    function initDownloadButton(){
+     function initDownloadButton(){
       let elems = document.querySelectorAll('.fixed-action-btn');
       let instances = M.FloatingActionButton.init(elems, {
         direction: 'left'
