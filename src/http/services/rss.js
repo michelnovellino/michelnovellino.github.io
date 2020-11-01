@@ -19,8 +19,6 @@ exports.Get = async function () {
             });
             console.log(posts)
             return posts
-            //document.getElementById('posts').innerHTML = html
-            console.log(items);
         });
 
 }

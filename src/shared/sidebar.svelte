@@ -13,7 +13,7 @@
     { title: "Nodejs" },
     { title: "Vuejs" },
     { title: "Angular" },
-    {title: "Boostrap"},
+    {title: "Bootstrap"},
     { title: "MaterializeCss" },
     { title: "Wordpress" },
     { title: "Mysql" },
@@ -69,7 +69,7 @@
   <div class="card-image waves-effect waves-block waves-light">
     <img
       class="activator"
-      src="{is_prod()}images/logo-min.jpeg "
+      src="{is_prod()}images/profile-cv-web.jpg"
       alt="profile" />
   </div>
   <div class="card-content">
